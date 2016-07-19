@@ -1,0 +1,19 @@
+<h3>Article</h3>
+<section style="padding-top: 30px;">
+<div class="thumbnail">
+<div class="well well-sm">
+	<h1>
+	#<%= @article.title %>
+	</h1>	 <br><hr>
+	<strong>Text:</strong>
+	<%= @article.text %>
+	</div>
+</div>
+</section>
+<h4>Comments:</h4>
+<%= render @article.comments %>
+<hr>
+<%= render 'comments/form'%>
+<br>
+<%= link_to 'Edit', edit_article_path, class: 'btn btn-warning btn-sm' %> | 
+<%= link_to 'Back', articles_path, class: 'btn btn-primary btn-sm' %>

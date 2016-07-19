@@ -1,0 +1,20 @@
+
+<section class=" thumbnail">
+<div class="well">
+
+<div >
+	<strong>Name: </strong>
+	<%= comment.commenter %>
+</div><hr>
+<div>
+	<strong>Comment: </strong>
+	<%= comment.body %>
+</div>
+<div>
+  <%= link_to 'Delete Comment', [comment.article, comment],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+</div>
+</div>
+
+</section>
